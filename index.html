@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juststreamit</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="https://kit.fontawesome.com/c87aad1df2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo"><img src="assets/logo.png"></a>
+        <ul class="naviguation">
+            <li><a href="#banner">Best Movie</a></li>
+            <li><a href="#categ_1">Best note</a></li>
+            <li><a href="#categ_2">Categ 1</a></li>
+            <li><a href="#categ_3">Categ 2</a></li>
+            <li><a href="#">Categ 3</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+    <!-- ------------------- section about the best movie ------------------- -->
+    <div class="banner" id="banner">
+        <img src="assets/bg.png" class="bg">
+        <div class="content">
+            <img src="assets/name.png" class="movie_title">
+            <h4>
+                <span>2019</span>
+                <span><i>12+</i></span>
+                <span>3h 12min</span>
+                <span>Action</span>
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sapiente exercitationem ducimus magn
+                am et molestias earum itaque reprehenderit similique dignissimos voluptas corporis mollitia, nisi ipsam.
+                Alias voluptatibus impedit iure laborum.</p>
+            <div class="buttons">
+                <a href="#"><i class="fa-solid fa-play"></i> Play</a>
+                <a href="#"><i class="fa-solid fa-plus"></i> My list</a>
+                <a onclick="toggleVideo()"><i class="fa-solid fa-film"></i> Trailer</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo()"><img src="assets/play.png"> Watch Trailer</a>
+    </div>
+    <div class="trailer">
+        <video src="assets/trailer.mp4" controls="true" autoplay="true" class="video"></video>
+        <img src="assets/close.png" class="close" onclick="toggleVideo()">
+    </div>
+
+
+
+    <!-- ------------------- section about the best movies ------------------- -->
+    <div class="slider" id="categ_1">
+        <h2 class="title">First Avenger</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_1.png">
+                            </div>
+                            <div class="details">
+                                <h2>Iron man<br><span>Tony Stark</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_2.png">
+                            </div>
+                            <div class="details">
+                                <h2>Thor<br><span>Thor Odinson</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_3.png">
+                            </div>
+                            <div class="details">
+                                <h2>Hulk<br><span>Bruce Banner</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_4.png">
+                            </div>
+                            <div class="details">
+                                <h2>Black Widow<br><span>Natasha Romanov</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_5.png">
+                            </div>
+                            <div class="details">
+                                <h2>Captain america<br><span>Steve Rogers</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_6.png">
+                            </div>
+                            <div class="details">
+                                <h2>Hawkeye<br><span>Clint Barton</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider new_generation" id="categ_2">
+        <h2 class="title">New Generation</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_7.png">
+                            </div>
+                            <div class="details">
+                                <h2>Spiderman<br><span>Peter Parker</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_8.png">
+                            </div>
+                            <div class="details">
+                                <h2>Dr Strange<br><span>Steven Strange</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_9.png">
+                            </div>
+                            <div class="details">
+                                <h2>Antman<br><span>Scott Lang</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_10.png">
+                            </div>
+                            <div class="details">
+                                <h2>Scarlet Witch<br><span>Wanda Maximoff</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_11.png">
+                            </div>
+                            <div class="details">
+                                <h2>Black Panther<br><span>T'Challa</span></h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_12.png">
+                            </div>
+                            <div class="details">
+                                <h2>Vision</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider enemy" id="categ_3">
+        <h2 class="title">Enemy</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_13.png">
+                            </div>
+                            <div class="details">
+                                <h2>Loki</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_14.png">
+                            </div>
+                            <div class="details">
+                                <h2>Ultron</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_15.png">
+                            </div>
+                            <div class="details">
+                                <h2>Winter Soldier</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_16.png">
+                            </div>
+                            <div class="details">
+                                <h2>Green Goblin</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_17.png">
+                            </div>
+                            <div class="details">
+                                <h2>Thanos</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <div class="imgBx">
+                                <img src="assets/avg_18.png">
+                            </div>
+                            <div class="details">
+                                <h2>Killmonger</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="animation.js"> </script>
+
+</body>
+
+</html>
