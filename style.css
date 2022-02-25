@@ -1,3 +1,5 @@
+/* -------------------------------    General   -------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,15 @@ body {
     background: #000;
 }
 
+:root {
+    --tr_black: rgba(0, 0, 0, 0.5);
+    --white: #FFF;
+    --red_netflix: #ab261f;
+    --tr_grey: rgba(255, 255, 255, 0.5);
+}
+
+/* -------------------------------    Nav    -------------------------------------- */
+
 header {
     position: fixed;
     top: 0;
@@ -20,7 +31,7 @@ header {
     align-items: center;
     padding: 30px 100px;
     z-index: 100;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--tr_black);
     transition: 0.5s;
 }
 
@@ -29,6 +40,9 @@ header .logo img {
 }
 .naviguation {
     display: flex;
+    width: 500px;
+    position: absolute;
+    left: calc(50% - 250px);
 }
 
 .naviguation li {
@@ -37,7 +51,7 @@ header .logo img {
 }
 
 .naviguation li a {
-    color: #FFF;
+    color: var(--white);
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 1px;
@@ -45,7 +59,7 @@ header .logo img {
 }
 
 .naviguation li a:hover {
-    color: #ab261f;
+    color: var(--red_netflix);
     transition: 0.3s;
     transform: scale3d(1.1, 1.1, 1.1);
     display: inline-block;
@@ -58,19 +72,32 @@ header .logo img {
 
 .search {
     position: relative;
-    width: 300px;
+    width: 55px;
     height: 40px;
+    transition: 2s;
+}
+
+.search:hover {
+    width: 200px;
+}
+
+.search:hover input {
+    width: 100%;
+}
+
+.search:hover .fa-search {
+    border-right: 1px solid var(--white);
 }
 
 .search input {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 100%;
-    color: #FFF;
+    color: var(--white);
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--tr_grey);
     outline: none;
     border-radius: 4px;
     padding: 0 10px 0 45px;
@@ -78,7 +105,7 @@ header .logo img {
 }
 
 .search input::placeholder {
-    color: #FFF;
+    color: var(--white);
 }
 
 .search .fa-search {
@@ -87,9 +114,12 @@ header .logo img {
     left: 10px;
     transform: translateY(-50%);
     padding-right: 10px;
-    color: #FFF;
-    border-right: 1px solid #FFF;
+    color: var(--white);
 }
+
+
+/* -------------------------------    Banner    -------------------------------------- */
+
 .banner {
     position: relative;
     width: 100%;
@@ -112,7 +142,7 @@ header .logo img {
 .content {
     position: relative;
     z-index: 1;
-    max-width: 550px;
+    max-width: 600px;
 }
 
 .movie_title {
@@ -120,13 +150,13 @@ header .logo img {
 }
 
 .banner .content h4 {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--tr_grey);
     font-weight: 500;
 }
 
 .banner .content h4 span {
     padding: 0 10px;
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid var(--tr_grey);
 }
 
 .banner .content h4 span:first-child {
@@ -138,8 +168,8 @@ header .logo img {
 }
 
 .banner .content h4 span i {
-    background: #ab261f;
-    color: #FFF;
+    background: var(--red_netflix);
+    color: var(--white);
     padding: 1px 8px;
     display: inline-block;
     font-style: normal;
@@ -150,7 +180,7 @@ header .logo img {
     font-size: 1em;
     font-weight: 300;
     line-height: 1.5em;
-    color: #FFF;
+    color: var(--white);
     margin: 10px 0 20px;
 }
 
@@ -158,14 +188,20 @@ header .logo img {
     position: relative;
     display: inline-block;
     margin-right: 10px;
-    background: #ab261f;
-    color: #FFF;
+    background: var(--red_netflix);
+    color: var(--white);
     padding: 6px 20px;
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: default;
+    height: 50px;
+    width: 180px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 23px;
+    border-radius: 5%;
 }
 
 .banner .content .buttons a:nth-child(2), .banner .content .buttons a:nth-child(3) {
@@ -174,7 +210,7 @@ header .logo img {
 }
 
 .banner .content .buttons a:hover {
-    background: #ab261f;
+    background: var(--red_netflix);
 }
 
 .play {
@@ -184,7 +220,7 @@ header .logo img {
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
-    color: #FFF;
+    color: var(--white);
     text-transform: uppercase;
     font-weight: 500;
     text-decoration: none;
@@ -232,6 +268,118 @@ header .logo img {
     max-width: 32px;
 }
 
+/* -------------------------------    Cards Slider    -------------------------------------- */
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    min-height: 50vh;
+    background: #000;
+}
+
+.slider .title {
+    color: var(--white);
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    margin: 3vh auto;
+}
+
+.swiper-slide {
+    background-position: center;
+    /* margin-top: calc(50vh - 175px); */
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+    margin: 0 20px;
+    background: var(--white);
+}
+
+.slider .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #333;
+    padding: 60px 40px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slider .card .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.5s;
+    background: radial-gradient(var(--red_netflix), #000);
+}
+
+.slider .card:hover .layer {
+    top: 0;
+}
+
+.slider .card .content {
+    position: relative;
+    z-index: 2;
+}
+
+.slider .card .content p {
+    font-size-adjust: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.slider .card .content .imgBx {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 15%;
+    overflow: hidden;
+    border: 4px solid var(--white);
+    box-shadow: 0 19px 20px rgba(0, 0, 0, 0.5);
+}
+
+.slider .card .content .imgBx img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider .card .content h2 {
+    font-size: 18px;
+    color: var(--white);
+}
+
+.slider .card .content span {
+    font-size: 14px;
+    transition: 0.5;
+    color: #FFFCB3
+}
+
+
+/* -------------------------------    Carroussel    -------------------------------------- */
+
+.carousel-items {
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    flex: 1 0 300px;
+    min-height: 400px;
+    margin-left: 1rem;
+    scroll-snap-align: start;
+}
+
+
+/* -------------------------------    Responsive    -------------------------------------- */
+
+
 @media (max-width: 991px) {
     header {
         padding: 20px 50px;
@@ -278,99 +426,98 @@ header .logo img {
     }
 }
 
+/* -------------------------------    Loading   -------------------------------------- */
 
-.slider {
-    position: relative;
-    max-width: 100%;
-    min-height: 50vh;
-    background: #000;
-}
-
-.slider .title {
-    color: #FFF;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Poppins', sans-serif;
-    margin: 3vh auto;
-}
-
-.swiper-slide {
-    background-position: center;
-    /* margin-top: calc(50vh - 175px); */
-    background-size: cover;
-    width: 350px;
-    height: 350px;
-    margin: 0 20px;
-    background: #FFF;
-}
-
-.slider .card {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    background: #333;
-    padding: 60px 40px;
-    text-align: center;
-    overflow: hidden;
-}
-
-.slider .card .layer {
+#loading_screen {
+    z-index: 10000000;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    z-index: 1;
-    transition: 0.5s;
-    background: radial-gradient(#ab261f, #000);
-}
-
-.enemy .card .layer {
-    background: radial-gradient(#7c444e, #000);
-}
-
-.new_generation .card .layer {
-    background: radial-gradient(#1fb2df, #000);
-}
-
-.slider .card:hover .layer {
-    top: 0;
-}
-
-.slider .card .content {
-    position: relative;
-    z-index: 2;
-}
-
-.slider .card .content p {
-    font-size-adjust: 18px;
-    line-height: 24px;
-    margin-bottom: 20px;
-    color: #FFF;
-}
-
-.slider .card .content .imgBx {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 10px;
-    border-radius: 15%;
+    width: 100%;
     overflow: hidden;
-    border: 4px solid #FFF;
-    box-shadow: 0 19px 20px rgba(0, 0, 0, 0.5);
+    background: #000;
+    animation: diseapear 4s linear;
 }
 
-.slider .card .content .imgBx img {
-    width: 100%;
-    height: 100%;
+@keyframes diseapear {
+    0% {
+        top: 0;
+    }
+    80% {
+        top: 0;
+    }
+    99% {
+        top: -200vh;
+    }
+    100% {
+        display: none;
+    }
 }
 
-.slider .card .content h2 {
-    font-size: 18px;
-    color: #FFF;
+#loading_screen img {
+    width: 30%;
+    position: absolute;
+    left: calc((100% - 30%) / 2);
+    top: calc((100% - 30%) / 2);
+    transition: 3s;
+    transform: scale(0.1);
+    animation: grow 4s linear;
 }
 
-.slider .card .content span {
-    font-size: 14px;
-    transition: 0.5;
-    color: #FFFCB3
+@keyframes grow {
+    0% {
+        width: 1%;
+        left: calc((100% - 1%) / 2);
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#loading_screen i {
+    position: absolute;
+    height: 200px;
+    background: linear-gradient(transparent, var(--red_netflix));
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: raining 4s linear infinite;
+}
+
+@keyframes raining {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(calc(100vh + 200px));
+    }
+}
+
+
+
+/* -------------------------------    Zeri   -------------------------------------- */
+
+#troll_3 {
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+#troll_3 p {
+    position: relative;
+    font-size: 1.5em;
+    line-height: 0.7em;
+    background: url("assets/logo.png"), url("assets/logo.png");
+    background-position-x: center;
+    background-blend-mode: color-dodge;
+    background-attachment: fixed;
+    background-size: 90%;
+    -webkit-background-clip: text;
+    color: transparent;
 }

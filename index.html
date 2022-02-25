@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juststreamit</title>
-
+    
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'/>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css"/>
-
+    
     <script src="https://kit.fontawesome.com/c87aad1df2.js" crossorigin="anonymous"></script>
 </head>
 
@@ -24,10 +24,22 @@
             <li><a href="#">Categ 3</a></li>
         </ul>
         <div class="search">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" id="input_search">
             <i class="fas fa-search"></i>
         </div>
     </header>
+    
+    
+    <!-- ------------------- section Loading ------------------- -->
+    <div id="parent_loading">
+        <div id="loading_screen">
+            <img src="assets/logo_2.png">
+        </div>
+    </div>
+    
+    
+    
+    
     <!-- ------------------- section about the best movie ------------------- -->
     <div class="banner" id="banner">
         <img src="assets/bg.png" class="bg">
@@ -39,78 +51,53 @@
                 <span>3h 12min</span>
                 <span>Action</span>
             </h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sapiente exercitationem ducimus magn
-                am et molestias earum itaque reprehenderit similique dignissimos voluptas corporis mollitia, nisi ipsam.
-                Alias voluptatibus impedit iure laborum.</p>
-            <div class="buttons">
-                <a href="#"><i class="fa-solid fa-play"></i> Play</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> My list</a>
-                <a onclick="toggleVideo()"><i class="fa-solid fa-film"></i> Trailer</a>
-            </div>
-        </div>
-    </div>
-    <div class="trailer">
-        <video src="assets/trailer.mp4" controls="true" autoplay="true" class="video"></video>
-        <img src="assets/close.png" class="close" onclick="toggleVideo()">
-    </div>
-
-    <!-- -------------------------------   Slider From API      ------------------------------------ -->
-    <div class="slider" id="categ_Action">
-        <h2 class="title">Action Movies</h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper" id="slide_1">
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="slider" id="categ_Adventure">
-        <h2 class="title">Adventure Movies</h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper" id="slide_2">
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="slider" id="categ_Animation">
-        <h2 class="title">Animation Movies</h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper" id="slide_3">
-                
-            </div>
-        </div>
-    </div>
-
-
-    <!-- <div class="swiper-slide">
-        <div class="card">
-            <div class="layer"></div>
-            <div class="content">
-                <div class="imgBx">
-                    <img src="assets/avg_1.png">
+            <p>Le Titan Thanos, ayant réussi à s'approprier les six Pierres d'Infinité et à les réunir sur le Gantelet
+                doré, a pu réaliser son objectif de pulvériser la moitié de la population de l'Univers. Cinq ans plus 
+                tard, Scott Lang, alias Ant-Man, parvient à s'échapper de la dimension subatomique où il était coincé.
+                Il propose aux Avengers une solution pour faire revenir à la vie tous les êtres disparus, dont leurs 
+                alliés et coéquipiers : récupérer les Pierres d'Infinité dans le passé..</p>
+                <div class="buttons">
+                    <a href="https://www.primevideo.com/detail/0SCA26FLXHRBCF2CA3E9SI6UR4/ref=atv_sr_fle_c_Tn74RA_2_1_2?sr=1-2&pageTypeIdSource=ASIN&pageTypeId=B07ZWJ7KMK&qid=1645721204" target="_blank"><i class="fa-solid fa-play"></i> Play</a>
+                    <a href="#"><i class="fa-solid fa-plus"></i> My list</a>
+                    <a onclick="toggleVideo()"><i class="fa-solid fa-film"></i> Trailer</a>
                 </div>
-                <div class="details">
-                    <h2>Iron man<br><span>Tony Stark</span></h2>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt, explicabo</p>
             </div>
         </div>
-    </div> -->
-
-
-
-
-
-
-
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-    <!-- <script src="jquery.js"></script> -->
-    <!-- <script src="jquery_opti.js"></script> -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="animation.js"> </script>
-
-</body>
-
-</html>
+        <div class="trailer">
+            <video src="assets/trailer.mp4" controls="true" autoplay="true" class="video"></video>
+            <img src="assets/close.png" class="close" onclick="toggleVideo()">
+        </div>
+        
+        <!-- ------------------- section about the Sliders ------------------- -->
+        
+        <section class="carousel slider">
+            <h2 class="title">Top 10 Movies</h2>
+            <ul class="carousel-items" id="slide_top">
+            </ul>
+        </section>
+        
+        
+        <section class="carousel slider">
+            <h2 class="title">Movies From Categ 1</h2>
+            <ul class="carousel-items" id="slide_1">
+            </ul>
+        </section>
+        
+        <section class="carousel slider">
+            <h2 class="title">Movies From Categ 2</h2>
+            <ul class="carousel-items" id="slide_2">
+            </ul>
+        </section>
+        
+        <section class="carousel slider">
+            <h2 class="title">Movies From Categ 3</h2>
+            <ul class="carousel-items" id="slide_3">
+            </ul>
+        </section>
+        
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="animation.js"> </script>
+        
+    </body>
+    
+    </html>
