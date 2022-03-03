@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <!-- ------------------- section Naviguation ------------------- -->
     <header>
         <a href="" class="logo"><img src="assets/logo.png"></a>
         <ul class="naviguation">
@@ -56,48 +57,73 @@
                 tard, Scott Lang, alias Ant-Man, parvient à s'échapper de la dimension subatomique où il était coincé.
                 Il propose aux Avengers une solution pour faire revenir à la vie tous les êtres disparus, dont leurs 
                 alliés et coéquipiers : récupérer les Pierres d'Infinité dans le passé..</p>
-                <div class="buttons">
-                    <a href="https://www.primevideo.com/detail/0SCA26FLXHRBCF2CA3E9SI6UR4/ref=atv_sr_fle_c_Tn74RA_2_1_2?sr=1-2&pageTypeIdSource=ASIN&pageTypeId=B07ZWJ7KMK&qid=1645721204" target="_blank"><i class="fa-solid fa-play"></i> Play</a>
-                    <a href="#"><i class="fa-solid fa-plus"></i> My list</a>
-                    <a onclick="toggleVideo()"><i class="fa-solid fa-film"></i> Trailer</a>
-                </div>
+            <div class="buttons">
+                <a href="https://www.primevideo.com/detail/0SCA26FLXHRBCF2CA3E9SI6UR4/ref=atv_sr_fle_c_Tn74RA_2_1_2?sr=1-2&pageTypeIdSource=ASIN&pageTypeId=B07ZWJ7KMK&qid=1645721204" target="_blank"><i class="fa-solid fa-play"></i> Play</a>
+                <a href="#"><i class="fa-solid fa-plus"></i> My list</a>
+                <a onclick="toggle_video()"><i class="fa-solid fa-film"></i> Trailer</a>
             </div>
         </div>
-        <div class="trailer">
-            <video src="assets/trailer.mp4" controls="true" autoplay="true" class="video"></video>
-            <img src="assets/close.png" class="close" onclick="toggleVideo()">
-        </div>
-        
-        <!-- ------------------- section about the Sliders ------------------- -->
-        
-        <section class="carousel slider">
-            <h2 class="title">Top 10 Movies</h2>
-            <ul class="carousel-items" id="slide_top">
-            </ul>
-        </section>
-        
-        
-        <section class="carousel slider">
-            <h2 class="title">Movies From Categ 1</h2>
-            <ul class="carousel-items" id="slide_1">
-            </ul>
-        </section>
-        
-        <section class="carousel slider">
-            <h2 class="title">Movies From Categ 2</h2>
-            <ul class="carousel-items" id="slide_2">
-            </ul>
-        </section>
-        
-        <section class="carousel slider">
-            <h2 class="title">Movies From Categ 3</h2>
-            <ul class="carousel-items" id="slide_3">
-            </ul>
-        </section>
-        
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script src="animation.js"> </script>
-        
-    </body>
+    </div>
+    <div class="trailer">
+        <video src="assets/trailer.mp4" controls="true" autoplay="true" class="video"></video>
+        <img src="assets/close.png" class="close" onclick="toggle_video()">
+    </div>
     
-    </html>
+    <!-- ------------------- section about the Sliders ------------------- -->
+    
+    <section class="carousel slider">
+        <h2 class="title">Top 10 Movies</h2>
+        <ul class="carousel-items" id="slide_top">
+        </ul>
+    </section>
+    
+    
+    <section class="carousel slider">
+        <h2 class="title">Movies From Categ 1</h2>
+        <ul class="carousel-items" id="slide_1">
+        </ul>
+    </section>
+    
+    <section class="carousel slider">
+        <h2 class="title">Movies From Categ 2</h2>
+        <ul class="carousel-items" id="slide_2">
+        </ul>
+    </section>
+    
+    <section class="carousel slider">
+        <h2 class="title">Movies From Categ 3</h2>
+        <ul class="carousel-items" id="slide_3">
+        </ul>
+    </section>
+    
+    <div class="movie_info" id="movie_info">
+        <div class="box_info">
+            <div class="content">
+                <h2 id="title_movie"></h2>
+                <h4>
+                    <span id="year_movie"></span>
+                    <span><i id="score_movie"></i></span>
+                    <span id="duration_movie"></span>
+                    <span id="genre_movie"></span>
+                    <span id="origin"></span>
+                </h4>
+                <p class="distribution">distribution: <span id="actors"></span></p>
+                <p class="directors">directors: <span id="directors"></span></p>
+                <br>
+                <p id="desc_movie"></p>
+            </div>
+            <div class="img_box">
+                <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg" id="img_movie">
+            </div>
+        </div>
+        <img src="assets/close.png" class="close" onclick="toggle_info()">
+    </div>
+    
+    
+    <!-- ------------------- section librairy js ------------------- -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="animation.js"> </script>
+        
+</body>
+
+</html>
