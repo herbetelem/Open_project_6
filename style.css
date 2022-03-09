@@ -581,13 +581,13 @@ header .logo img {
     border-radius: 2px;
 }
 
-.distribution, .directors {
+.distribution, .directors, .rated {
     color: var(--tr_grey);
     font-weight: 500;
     font-size: 0.6em;
 }
 
-#actors, #directors {
+#actors, #directors, #rated {
     color: var(--white);
     font-size: 1.2em;
 }

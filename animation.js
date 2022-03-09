@@ -130,6 +130,7 @@ function get_information(id) {
     document.getElementById('actors').innerHTML = result.actors.join(", ");
     document.getElementById('directors').innerHTML = result.directors.join(", ");
     document.getElementById('origin').innerHTML = result.countries.join(", ") + ' <span class="fa-solid fa-earth-europe" />';
+    document.getElementById('rated').innerHTML = result.rated;
   })
   .catch(error => console.log('error', error));
 }
