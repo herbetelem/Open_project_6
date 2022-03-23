@@ -124,13 +124,15 @@ function get_information(id) {
     document.getElementById('desc_movie').innerHTML = result.long_description;
     document.getElementById('img_movie').setAttribute("src", result.image_url);
     document.getElementById('year_movie').innerHTML = result.year;
-    document.getElementById('score_movie').innerHTML = result.imdb_score;
+    document.getElementById('score_movie').innerHTML = result.imdb_score + ' <span class="fa-solid fa-star"/>';
     document.getElementById('duration_movie').innerHTML = result.duration + ' <span class="fa-regular fa-clock" />';
     document.getElementById('genre_movie').innerHTML = result.genres.join(", ");
     document.getElementById('actors').innerHTML = result.actors.join(", ");
     document.getElementById('directors').innerHTML = result.directors.join(", ");
     document.getElementById('origin').innerHTML = result.countries.join(", ") + ' <span class="fa-solid fa-earth-europe" />';
     document.getElementById('rated').innerHTML = result.rated;
+    document.getElementById('vote').innerHTML = result.votes;
+    document.getElementById('realise').innerHTML = result.date_published;
   })
   .catch(error => console.log('error', error));
 }

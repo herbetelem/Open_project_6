@@ -7,16 +7,15 @@
     <title>Juststreamit</title>
     
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css"/>
     
     <script src="https://kit.fontawesome.com/c87aad1df2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- ------------------- section Naviguation ------------------- -->
+    <!--                           section Naviguation                            -->
     <header>
-        <a href="" class="logo"><img src="assets/logo.png"></a>
+        <a href="" class="logo"><img src="assets/logo.png" alt="logo"></a>
         <ul class="naviguation">
             <li><a href="#banner">Best Movie</a></li>
             <li><a href="#categ_1">Best note</a></li>
@@ -31,21 +30,21 @@
     </header>
     
     
-    <!-- ------------------- section Loading ------------------- -->
+    <!--                           section Loading                           -->
     <div id="parent_loading">
         <div id="loading_screen">
-            <img src="assets/logo_2.png">
+            <img src="assets/logo_2.png" alt="logo">
         </div>
     </div>
     
     
     
     
-    <!-- ------------------- section about the best movie ------------------- -->
+    <!--                           section about the best movie                            -->
     <div class="banner" id="banner">
-        <img src="assets/bg.png" class="bg">
+        <img src="assets/bg.png" class="bg" alt="bg">
         <div class="content">
-            <img src="assets/name.png" class="movie_title">
+            <img src="assets/name.png" class="movie_title" alt="name">
             <h4>
                 <span>2019</span>
                 <span><i>12+</i></span>
@@ -65,11 +64,11 @@
         </div>
     </div>
     <div class="trailer">
-        <video src="assets/trailer.mp4" controls="true" autoplay="true" class="video"></video>
-        <img src="assets/close.png" class="close" onclick="toggle_video()">
+        <video src="assets/trailer.mp4" controls autoplay class="video">bande annonce avanger endgame</video>
+        <img src="assets/close.png" class="close" onclick="toggle_video()" alt="close">
     </div>
     
-    <!-- ------------------- section about the Sliders ------------------- -->
+    <!--                            section about the Sliders                             -->
     
     <section class="carousel slider">
         <h2 class="title">Top 10 Movies</h2>
@@ -96,17 +95,23 @@
         </ul>
     </section>
     
+
+    <!--                             section about the information on a unique moovie                             -->
+
+
     <div class="movie_info" id="movie_info">
         <div class="box_info">
             <div class="content">
-                <h2 id="title_movie"></h2>
+                <h2 id="title_movie">titre</h2>
                 <h4>
-                    <span id="year_movie"></span>
+                    <span id="year_movie">titre</span>
                     <span><i id="score_movie"></i></span>
                     <span id="duration_movie"></span>
                     <span id="genre_movie"></span>
                     <span id="origin"></span>
                 </h4>
+                <p class="vote">Vote: <span id="vote"></span></p>
+                <p class="realise">Date de sortie: <span id="realise"></span></p>
                 <p class="distribution">Distribution: <span id="actors"></span></p>
                 <p class="directors">Directors: <span id="directors"></span></p>
                 <p class="rated">Rated: <span id="rated">unknown</span></p>
@@ -114,14 +119,14 @@
                 <p id="desc_movie"></p>
             </div>
             <div class="img_box">
-                <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg" id="img_movie">
+                <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg" id="img_movie" alt="img movie">
             </div>
         </div>
-        <img src="assets/close.png" class="close" onclick="toggle_info()">
+        <img src="assets/close.png" class="close" onclick="toggle_info()" alt="close">
     </div>
     
     
-    <!-- ------------------- section librairy js ------------------- -->
+    <!--                           section librairy js                             -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="animation.js"> </script>
         
