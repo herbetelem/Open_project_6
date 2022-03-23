@@ -1,5 +1,5 @@
 # Project Openclassroom Développez une interface utilisateur pour une application web python
-[![forthebadge](http://forthebadge.com/images/badges/works-on-my-machine.svg)](http://forthebadge.com)  [![forthebadge](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)](http://forthebadge.com)
+[![forthebadge](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)](http://forthebadge.com)  [![forthebadge](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)](http://forthebadge.com)
 
 The goal of this project is to create a program allowing the creation and management of chess tournaments, while storing the results in a database.
 
