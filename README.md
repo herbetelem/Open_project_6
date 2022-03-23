@@ -14,12 +14,11 @@ Once this requirement have been done, you will only have to open the index.html 
 
 ## Functional
 
-On the first menu choose whether you want to load tournament data, or create a new one
-If you select:
-- load: in this case, you will have a list of previously completed tournaments, you can choose one to see its ranking
-- new game: in this case you will have 2 more step:
-  - create the tournament: in this step you will have to enter the information requested at each step, then validated so that the tournament is created and saved in the database
-  - manage the tournament: in this step you will have to generate the round once, select per match the player who won or the board in case of a draw, then validate the round
+Le menu en haut est la pour vous permettre d'atteindre les différentes partie du site, la barre de recherche en revanche n'est la que pour faire joli
+Dans la section:
+- Premiere section: ici, vous aurez un film a l'affiche, vous aurez un liens pour pouvoir le voir en ligne, voir ca bande annonce, et avoir quelque information tel que la description du film son titre, une affiche, ...
+- Section Top 10: dans cette section vous aurrez le top 10 des films qui proviennent de la base de donnée de l'api mise a disposition pour ce projet.
+- Section Catégorie: danS cette section vous aurrez le 10 films provenant de catégorie deffinie a l'avance, si vous souhaitez changer de catégorie, vous devrez modifiez les lignes 152, 153, 155, 156, 158, 159 avec un liens tel que celui ci '''http://localhost:8000/api/v1/titles/?genre=Fantasy&min_year=2015'''.
 
 ## Made with
 
