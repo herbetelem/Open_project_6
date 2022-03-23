@@ -1,37 +1,15 @@
 # Project Openclassroom Développez une interface utilisateur pour une application web python
 [![forthebadge](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](http://forthebadge.com)  [![forthebadge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](http://forthebadge.com).  [![forthebadge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](http://forthebadge.com)
 
-The goal of this project is to create a program allowing the creation and management of chess tournaments, while storing the results in a database.
-
-## First version
-
-this project is a review from a old version, i have created this one with the MVC patern
-- link: https://github.com/herbetelem/Open_project_4
-
-## Launching
-
-For lauching this projet, we will use the file main.py in the terminal
+The objective of this project is to fulfill the expectations of a client who wishes to create a site which will have to present in the form of a slider films from various categories, or from the top 10 of the best films. 
 
 ### Prerequisites
 
-You will need
-
-- pygame https://www.pygame.org/wiki/GettingStarted
-
-### Installation
-
-Into your file use comand ``pip install -r requirement.txt`` for install all librairy
-
+you juste have install the requireemnt for the api, check this link to get the information about it here https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR.
 
 ## Launching
 
-Just Use this commmand ``python main.py``
-
-
-## Flake8-html
-
-the flake8 have been generate into the folder flake-report
-If you want to generate an other one une this command ``flake8 --format=html --htmldir=flake-report --max-line-length=119``
+Once this requirement have been done, you will only have to open the index.html file into your browser
 
 
 ## Functional
