@@ -14,11 +14,14 @@ Once this requirement have been done, you will only have to open the index.html 
 
 ## Functional
 
-Le menu en haut est la pour vous permettre d'atteindre les différentes partie du site, la barre de recherche en revanche n'est la que pour faire joli
-Dans la section:
-- Premiere section: ici, vous aurez un film a l'affiche, vous aurez un liens pour pouvoir le voir en ligne, voir ca bande annonce, et avoir quelque information tel que la description du film son titre, une affiche, ...
-- Section Top 10: dans cette section vous aurrez le top 10 des films qui proviennent de la base de donnée de l'api mise a disposition pour ce projet.
-- Section Catégorie: danS cette section vous aurrez le 10 films provenant de catégorie deffinie a l'avance, si vous souhaitez changer de catégorie, vous devrez modifiez les lignes 152, 153, 155, 156, 158, 159 avec un liens tel que celui ci '''http://localhost:8000/api/v1/titles/?genre=Fantasy&min_year=2015'''.
+The menu at the top is there to allow you to reach the different parts of the site, the search bar on the other hand is only there to look pretty
+In the section:
+- First section: here, you will have a movie showing, you will have a link to watch it online, see its trailer, and have some information such as the description of the movie, its title, a poster, ...
+- Top 10 section: in this section you will have the top 10 films that come from the api database made available for this project.
+- Category section: in this section you will have the 10 films from the category defined in advance, if you wish to change category, you will have to modify lines 152, 153, 155, 156, 158, 159 with a link such as this ``http://localhost:8000/api/v1/titles/?genre={GENRE}{&min_year=xxxx}``.
+In this link, the ``{GENRE}`` have to be replace by the genre you want to have, and the ``{&min_year=xxxx}`` have to be place if you want to get the movies who have been realised after a precise year, the xxxx respresanted the year.
+- Film info section: once you click on a film, you will have a card that will give you information about the chosen film (director, cast, genre, ...)
+
 
 ## Made with
 
